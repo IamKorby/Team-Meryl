@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hello Again</string>
+    <string name="text_view1">Hello Again</string>
+    <string name="text_view2">0</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_pressme">Press Me!</string>
+</resources>
