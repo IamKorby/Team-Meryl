@@ -14,7 +14,7 @@
 	e.g. Week 2 Residency 2, added Home page
 		Commit Message: Week 2.2 - Added Home Page
 
-	Directory: Push in '[Week 2 - Week X] Developing Android Apps Online Course' Folder
+	Directory: Push in 'Online Course' Folder
 
 5) I created a powerpoint crash course file for you guys :D This file contains the basic stuff you might need for the online course
 
