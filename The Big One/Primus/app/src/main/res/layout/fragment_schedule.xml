@@ -1,18 +1,47 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.aaron.primus.ScheduleFragment">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="SCHEDULE"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="174dp"
-        android:layout_gravity="center_horizontal|top" />
+        android:text="View Schedule"
+        android:id="@+id/buttonViewSched"
+        android:layout_marginBottom="33dp"
+        android:layout_above="@+id/buttonEditSched"
+        android:layout_alignLeft="@+id/buttonNewSched"
+        android:layout_alignStart="@+id/buttonNewSched"
+        android:layout_alignRight="@+id/buttonEditSched"
+        android:layout_alignEnd="@+id/buttonEditSched" />
 
-</FrameLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Schedule"
+        android:id="@+id/buttonEditSched"
+        android:layout_above="@+id/buttonNewSched"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Schedule"
+        android:id="@+id/buttonNewSched"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Schedule"
+        android:id="@+id/buttonSendSched"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/buttonNewSched"
+        android:layout_alignLeft="@+id/buttonNewSched"
+        android:layout_alignStart="@+id/buttonNewSched"
+        android:layout_alignRight="@+id/buttonNewSched"
+        android:layout_alignEnd="@+id/buttonNewSched" />
+</RelativeLayout>

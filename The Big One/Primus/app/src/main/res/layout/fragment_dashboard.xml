@@ -5,14 +5,30 @@
     tools:context="com.example.aaron.primus.Dashboard">
 
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="DASHBOARD"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
+        android:text="Upcoming Events"
+        android:id="@+id/buttonUpEvents"
+        android:layout_above="@+id/buttonUpBreaks"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="174dp" />
+        android:layout_marginBottom="74dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upcoming Breaks"
+        android:id="@+id/buttonUpBreaks"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/buttonUpEvents"
+        android:layout_alignEnd="@+id/buttonUpEvents" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conflicts"
+        android:id="@+id/buttonConflicts"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/buttonUpBreaks"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

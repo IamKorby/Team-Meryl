@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setSubtitle("DASHBOARD");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -80,21 +81,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentHolder = new DashboardFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragmentHolder);
+            toolbar.setSubtitle("DASHBOARD");
             fragmentTransaction.commit();
         } else if (id == R.id.nav_schedule) {
             fragmentHolder = new ScheduleFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragmentHolder);
+            toolbar.setSubtitle("SCHEDULE");
             fragmentTransaction.commit();
         } else if (id == R.id.nav_imports) {
             fragmentHolder = new ImportsFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragmentHolder);
+            toolbar.setSubtitle("IMPORTS");
             fragmentTransaction.commit();
         } else if (id == R.id.nav_events) {
             fragmentHolder = new EventsFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragmentHolder);
+            toolbar.setSubtitle("EVENTS");
             fragmentTransaction.commit();
         }
 

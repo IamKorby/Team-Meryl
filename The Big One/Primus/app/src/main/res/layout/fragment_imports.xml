@@ -1,18 +1,33 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.aaron.primus.ImportsFragment">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="IMPORTS"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
+        android:text="List of Imports"
+        android:id="@+id/buttonListScheds"
+        android:layout_above="@+id/buttonImportSched"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="174dp"
-        android:layout_gravity="center_horizontal|top" />
+        android:layout_marginBottom="78dp" />
 
-</FrameLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recieve Imports"
+        android:id="@+id/buttonImportSched"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/buttonListScheds"
+        android:layout_alignStart="@+id/buttonListScheds" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Import"
+        android:id="@+id/buttonDeleteImport"
+        android:layout_below="@+id/buttonImportSched"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+</RelativeLayout>

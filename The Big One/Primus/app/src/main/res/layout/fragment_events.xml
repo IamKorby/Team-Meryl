@@ -1,17 +1,38 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.aaron.primus.EventsFragment">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="EVENTS"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="174dp"
-        android:layout_gravity="center_horizontal|top" />
-</FrameLayout>
+        android:text="List of Events"
+        android:id="@+id/buttonListEvents"
+        android:layout_marginBottom="65dp"
+        android:layout_above="@+id/buttonAddEvent"
+        android:layout_alignLeft="@+id/buttonDeleteEvent"
+        android:layout_alignStart="@+id/buttonDeleteEvent"
+        android:layout_alignRight="@+id/buttonAddEvent"
+        android:layout_alignEnd="@+id/buttonAddEvent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Event"
+        android:id="@+id/buttonAddEvent"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/buttonDeleteEvent"
+        android:layout_alignStart="@+id/buttonDeleteEvent"
+        android:layout_alignRight="@+id/buttonDeleteEvent"
+        android:layout_alignEnd="@+id/buttonDeleteEvent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Event"
+        android:id="@+id/buttonDeleteEvent"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/buttonAddEvent"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
