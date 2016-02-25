@@ -76,6 +76,10 @@
         "source": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_edit_sched.xml",
+        "source": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\src\\main\\res\\layout\\fragment_edit_sched.xml"
+    },
+    {
         "merged": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_time.xml"
     },
@@ -90,6 +94,10 @@
     {
         "merged": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_view_sched.xml",
+        "source": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\src\\main\\res\\layout\\fragment_view_sched.xml"
     },
     {
         "merged": "C:\\Users\\Aaron\\AndroidStudioProjects\\Primus\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",

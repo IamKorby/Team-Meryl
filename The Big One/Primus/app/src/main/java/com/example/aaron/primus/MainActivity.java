@@ -1,8 +1,8 @@
 package com.example.aaron.primus;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,18 +11,23 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, EditSchedFragment.onPeriodSendListener {
 
     //Global set so it can be used everywhere in main
     NavigationView navigationView = null;
     Toolbar toolbar = null;
+    Schedule mySchedule;//serves as the users own schedule
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Create blank schedule (later populated when database is implemented)
+        mySchedule = new Schedule();
         //Set the Dashboard fragment initially and commits it
+        android.app.FragmentManager fragmentManager = getFragmentManager();
         DashboardFragment fragment = new DashboardFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
@@ -107,4 +112,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    //unique methods accessed by fragments start here
+    @Override
+    public void setPeriodInfo(String day, int start, int end){//adds periods to schedule
+        mySchedule.addNewPeriod(day, start, end);
+    }
+
+    public Schedule getMySchedule(){//Sends the schedules to other fragments for viewing and comparing
+        return mySchedule;
+    }
+
 }
