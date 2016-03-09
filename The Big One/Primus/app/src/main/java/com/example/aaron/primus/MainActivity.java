@@ -1,5 +1,6 @@
 package com.example.aaron.primus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -10,8 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, EditSchedFragment.onPeriodSendListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Global set so it can be used everywhere in main
     NavigationView navigationView = null;
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
+            Toast.makeText(getApplicationContext(), "CHECK", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -113,10 +116,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    //unique methods accessed by fragments start here
     @Override
-    public void setPeriodInfo(String day, int start, int end){//adds periods to schedule
-        mySchedule.addNewPeriod(day, start, end);
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Bundle extras = data.getExtras();
+        String doWhat = data.getStringExtra("Do What");
+        switch(doWhat){
+            case "add":
+                setPeriodInfo(data.getStringExtra("Day"), data.getIntExtra("Start", 0), data.getIntExtra("End", 0), data.getStringExtra("Title"));
+                Toast.makeText(getApplicationContext(), "Period Added", Toast.LENGTH_SHORT).show();//pop-up to show its done
+                break;
+            case "delete":
+                deletePeriod(data.getStringExtra("Day"), data.getIntExtra("Start", 0), data.getIntExtra("End", 0), data.getStringExtra("Title"));
+                Toast.makeText(getApplicationContext(), "Period Deleted", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    //unique methods start here
+
+    public void setPeriodInfo(String day, int start, int end, String title){//adds periods to schedule
+        mySchedule.addNewPeriod(day, start, end, title);
+    }
+
+    public void deletePeriod(String day, int start, int end, String title){
+        mySchedule.deletePeriod(day, start, end, title);
     }
 
     public Schedule getMySchedule(){//Sends the schedules to other fragments for viewing and comparing

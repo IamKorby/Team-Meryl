@@ -1,5 +1,6 @@
 package com.example.aaron.primus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -44,10 +45,8 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
                 fragmentTransaction.commit();
                 break;
             case R.id.buttonEditSched:
-                fragmentHolder = new EditSchedFragment();
-                fragmentTransaction.replace(R.id.fragment_container, fragmentHolder);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                Intent intent = new Intent(getActivity(), EditSchedActivity.class);
+                startActivityForResult(intent, 1);
                 break;
             case R.id.buttonNewSched://Deletes old schedule
                 break;

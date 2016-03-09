@@ -33,5 +33,4 @@ public class ViewSchedFragment extends Fragment {
         periodListView.setAdapter(schedulePeriods);
         return view;
     }
-
 }
